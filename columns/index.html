@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Column And Struts
+    </title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Column And Struts </h1>
+        <div class="form-container">
+            <div class="input-group" id="theory-group">
+                <label for="theory">Select Theory:</label>
+                <select id="theory">
+                    <option value="" disabled selected>Select Theory</option>
+                    <option value="euler">Euler Formula</option>
+                    <option value="rankine-gordon">Rankine-Gordon Formula</option> 
+                    <option value="johnson-parabolic">Johnson Parabolic Formula</option>
+                    <!-- Add other theories as needed  -->
+                </select>
+            </div>
+            <div id="end-condition-group" class="input-group">
+                <label for="end-condition">Select End Condition:</label>
+                <select id="end-condition">
+                    <option value="" disabled selected>Select End Condition</option>
+                    <option value="both-ends-pinned">Both Ends Pinned</option>
+                    <option value="both-ends-fixed">Both Ends Fixed</option>
+                    <option value="one-end-fixed-one-end-pinned">One End Fixed, One End Pinned</option>
+                    <option value="one-end-fixed-one-end-free">One End Fixed, One End Free</option> 
+                    <!-- Add other end conditions as needed -->
+                </select>
+            </div>
+            <img id="end-condition-image" src="" alt="End Condition Image" style="display: none;">
+            <div class="input-group">
+                <label for="length">Enter Length of Column (in m):</label>
+                <input type="number" id="length" placeholder="Enter Length">
+            </div>
+            <div class="input-group">
+                <label for="cross-section">Select Cross Section:</label>
+                <select id="cross-section">
+                    <option value="" disabled selected>Select Cross Section</option>
+                    <option value="circle">Circle</option>
+                    <option value="square">Square</option>
+                    <option value="rectangle">Rectangle</option>
+                    <option value="triangle">Triangle</option>
+                    <option value="hollow-circle">Hollow Circular</option>
+                    <option value="t-section">T-Section</option>
+                    <option value="i-section">I-Section</option>
+                    <option value="l-section">L-Section</option>
+                    
+                    
+                    <!-- Add other cross-sections as needed -->
+                </select>
+            </div>
+            <img id="cross-section-image" src="" alt="" style="display: none;">
+
+
+            <!-- Input fields for different cross-section types -->
+            <div id="circle-fields" class="input-group" style="display: none;">
+                <label for="circle-diameter">Enter Diameter of Circle (in mm):</label>
+                <input type="number" id="circle-diameter" placeholder="Enter Diameter">
+            </div>
+
+            <div id="square-fields" class="input-group" style="display: none;">
+                <label for="square-side">Enter Side of Square (in mm):</label>
+                <input type="number" id="square-side" placeholder="Enter Side">
+            </div>
+
+            <div id="rectangle-fields" class="input-group" style="display: none;">
+                <label for="rectangle-length">Enter Length of Rectangle (in mm):</label>
+                <input type="number" id="rectangle-length" placeholder="Enter Length">
+                <label for="rectangle-width">Enter Width of Rectangle (in mm):</label>
+                <input type="number" id="rectangle-width" placeholder="Enter Width">
+            </div>
+
+            <div id="triangle-fields" class="input-group" style="display: none;">
+                <label for="triangle-base">Enter Base of Triangle (in mm):</label>
+                <input type="number" id="triangle-base" placeholder="Enter Base">
+                <label for="triangle-height">Enter Height of Triangle (in mm):</label>
+                <input type="number" id="triangle-height" placeholder="Enter Height">
+            </div>
+            <div id="hollow-circle-fields" class="input-group" style="display: none;">
+                <label for="hollow-circle-outer-diameter">Enter Outer Diameter of Hollow Circle (in mm):</label>
+                <input type="number" id="hollow-circle-outer-diameter" placeholder="Enter Outer Diameter">
+                <label for="hollow-circle-inner-diameter">Enter Inner Diameter of Hollow Circle (in mm):</label>
+                <input type="number" id="hollow-circle-inner-diameter" placeholder="Enter Inner Diameter">
+            </div>
+
+
+            <div id="t-section-fields" class="input-group" style="display: none;">
+                <label for="bc">Enter Flange Width (bc):</label>
+                <input type="number" placeholder="Enter value in (mm)" id="bc" required>
+                <label for="hc">Enter Flange Height (hc):</label>
+                <input type="number" placeholder="Enter value in (mm)" id="hc" required>
+                <label for="bw">Enter Web Width (bw):</label>
+                <input type="number" placeholder="Enter value in (mm)" id="bw" required>
+                <label for="hw">Enter Web Height (hw):</label>
+                <input type="number" placeholder="Enter value in (mm)" id="hw" required>
+            </div>
+
+            <div id="i-section-fields" class="input-group" style="display: none;">
+                <label for="a"> Enter the value of a:</label>
+                <input type="number" placeholder="Enter value in (mm)" id="a" required>
+                <label for="b">Enter the value of b:</label>
+                <input type="number" placeholder="Enter value in (mm)" id="b" required>
+                <label for="c">Enter the value of c:</label>
+                <input type="number" placeholder="Enter value in (mm)" id="c" required>
+                <label for="d">Enter the value of d:</label>
+                <input type="number" placeholder="Enter value in (mm)" id="d" required>
+                <label for="e">Enter the value of e:</label>
+                <input type="number" placeholder="Enter value in (mm)" id="e" required>
+                <label for="f">Enter the value of f:</label>
+                <input type="number" placeholder="Enter value in (mm)" id="f" required>
+            </div>
+
+            <div id="l-section-fields" class="input-group" style="display: none;">
+                <label for="H">Enter the Value of H :</label>
+                <input type="number" placeholder="Enter value in (mm)" id="H" required>
+                <label for="B">Enter the value of B:</label>
+                <input type="number" placeholder="Enter value in (mm)" id="B" required>
+                <label for="t">Enter the value of t:</label>
+                <input type="number" placeholder="Enter value in (mm)" id="t" required>
+            </div>
+
+            <div class="input-group">
+                <label for="material">Select Material:</label>
+              <select id="material">
+                    <option value="" disabled selected>Select Material</option>
+                    <option value="cu">Copper</option>
+                    <option value="al">Aluminum</option>
+                    <option value="steel">Steel</option>
+                    <option value="rcc">Reinforced Concrete (RCC)</option>
+                </select>
+            </div>
+            <button id="calculate">Calculate </button>
+        </div>
+        <div class="results">
+            <h2>Results:</h2>
+            <p id="result-value"></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

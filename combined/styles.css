@@ -1,0 +1,116 @@
+/* Add your CSS styling here */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4; /* Light gray background */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333; /* Dark gray header */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+
+.container {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    max-width: 600px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease; /* Add transition for box-shadow */
+}
+
+.container:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Change box-shadow on hover */
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+.input-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+.input-container input,
+.input-container select {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease; /* Add transition for border-color */
+}
+
+.input-container input:focus,
+.input-container select:focus {
+    border-color: #007bff; /* Change border color on focus */
+}
+
+.button {
+    background-color: #007bff; /* Blue button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.result {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+}
+
+canvas {
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #007bff; /* Blue border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.3); /* Add shadow effect */
+    transition: border-color 0.3s ease; /* Add transition for border-color */
+}
+
+canvas:hover {
+    border-color: #0056b3; /* Darker border on hover */
+}
+
+/* Advanced Features */
+
+.container::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.input-container input[type="number"]::-webkit-inner-spin-button,
+.input-container input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input-container input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "alias": "beam-calculator.now.sh",
+  "routes": [
+    {
+      "src": "/img/(.*)",
+      "headers": { "cache-control": "max-age=31104000, s-maxage=31104000" }
+    },
+    {
+      "src": "/(.*)",
+      "headers": { "cache-control": "max-age=31104000, s-maxage=31104000" }
+    }
+  ]
+}

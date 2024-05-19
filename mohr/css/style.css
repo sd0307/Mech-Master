@@ -1,0 +1,165 @@
+
+
+    body {
+        font-family: "Oswald", sans-serif;
+        text-align: center;
+        min-width: 700;
+        background-color: #66A5AD;
+    }
+    
+    canvas {
+        /* border: 1px solid black; */
+        margin-top:-1%;
+        padding: 20px;
+    }
+    
+    section {
+        min-width: 100;
+    }
+    
+    .nonCanvasComponents {
+        margin-top: 1px;
+        /* background-color: lightyellow; */
+        color: #07505a
+        ;
+        /* width: 30%; */
+        /* float: left; */
+        /* margin-left: 35%; */
+        float: none;
+        /* border: 0px ; */
+}
+    
+    
+    .nonCanvasResults {
+        margin-top: 1px;
+        /* background-color: lightyellow; */
+        color: #07505a
+        ;
+        /* width: 25%;
+        float: left;
+        margin-left: 100px; */
+        /* margin-left: 35%; */
+        float: none;
+    }
+    
+    .graph2 {
+        float: left;
+    }
+    
+    .graph1 {
+        float: right;
+    }
+    
+    .initialline{
+        display: block;
+        clear: both;   
+        border-style: none none dotted;
+        color: #07505a;  
+    }
+    
+    .line {
+        display: block;
+        clear: both;
+        padding-top: 5px;
+        border-style: none none dotted;
+        color: #07505a;
+    }
+    
+    .slider {
+        /* vertical-align: center; */
+        /* float: left; */
+        /* margin-left: 100px; */
+        margin-top: 50px;
+        margin-bottom: 50px;
+        float: none;
+        margin-left: 42%;
+        /* border: 0px; */
+    }
+    
+    table {
+        font-size: 12pt;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    .graph2{
+        margin-left: 10px;
+    }
+    
+    input[type=text] {
+        width: 100%;
+        margin: 1px 0;
+        box-sizing: border-box;
+        font-size: 12pt;
+        font-weight: bold;
+        font-family: "Oswald", Times, serif;
+        color: #07505a; 
+        height: 40px;
+    
+    }
+    
+    button {
+        font-size: 14pt;
+        font-family: "Oswald";
+        border: 0px;
+        border-radius: 8px;
+        background-color: #07505a;
+        color: white;
+        padding: 12px;
+        margin-left: 8%;
+        margin-top:1%
+    }
+    
+    .blank_row {
+        height: 3px;
+    
+    }
+    
+    .slider_range {
+        width: 160px;
+    }
+    
+    input[type=text] {
+        border: 0px;
+        border-radius: 8px;
+        padding: 6px;
+        margin:5px
+    }
+
+    #firstTable{
+        margin-left: 28%;
+        width: 40%;
+
+    }
+
+    #secondTable{
+        margin-left: 32%;
+        width: 40%;
+
+    }
+
+    fieldset{
+        border: 0px;
+    }
+
+   
+    .mainContainer {
+        background-color: #C4DFE6;
+        animation-name: slideInAnimation;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-out;
+    }
+    
+    @keyframes slideInAnimation {
+        0% {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+
+    /* #C4DFE6, #07505a */

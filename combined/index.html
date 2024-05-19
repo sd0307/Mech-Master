@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Bending and Torsion Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Combined Bending and Torsion Analysis</h1>
+    </header>
+    <div class="container">
+        <div class="input-container">
+            <label for="shaftLength">Length of Shaft (m):</label>
+            <input type="number" id="shaftLength">
+        </div>
+        <div class="input-container">
+            <label for="gearPosition">Position of Gear (m):</label>
+            <input type="number" id="gearPosition">
+        </div>
+        <div class="input-container">
+            <label for="appliedLoad">Applied Load (N):</label>
+            <input type="number" id="appliedLoad">
+        </div>
+        <div class="input-container">
+            <label for="power">Power (W):</label>
+            <input type="number" id="power">
+        </div>
+        <div class="input-container">
+            <label for="speed">Speed (RPM):</label>
+            <input type="number" id="speed">
+        </div>
+        <div class="input-container">
+            <label for="material">Material:</label>
+            <select id="material">
+                <option value="" disabled selected>Select Material</option>
+                <option value="steel">Steel</option>
+                <option value="copper">Copper</option>
+                <option value="aluminum">Aluminum</option>
+                <option value="rcc">Reinforced Concrete (RCC)</option>
+            </select>
+        </div>
+        <div id="allowableStressContainer" class="input-container"></div>
+        <div id="allowableShearStressContainer" class="input-container"></div>
+        <!-- <div class="input-container">
+            <label for="safetyFactor">Safety Factor:</label>
+            <input type="number" id="safetyFactor" value="1">
+        </div> -->
+        <button onclick="calculateDiameter()">Calculate</button>
+        <canvas id="diagramCanvas" width="400" height="200"></canvas>
+        <div id="result" class="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

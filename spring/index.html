@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Spring Analysis</h1>
+        <form id="springForm">
+            <label for="springType">Select Spring Type:</label>
+            <select id="springType" onchange="toggleHelixAngle()">
+                <option value="closed">Closed Coil</option>
+                <option value="open">Open Coil</option>
+            </select>
+            <div id="helixAngleInput" style="display:none;">
+                <label for="helixAngle">Helix Angle (α):</label>
+                <input type="number" id="helixAngle" step="any">
+            </div>
+            <label for="materialType">Select Material:</label>
+            <select id="materialType">
+                <option value="" disabled selected>Select Type of Material</option>
+                <option value="copper">Copper</option>
+                <option value="aluminium">Aluminium</option>
+                <option value="steel">Steel</option>
+                <option value="rcc">RCC</option>
+            </select>
+            <label for="load">Load Applied (W) [N]:</label>
+            <input type="number" id="load">
+            <label for="springDiameter">Spring Diameter (D) [mm]:</label>
+            <input type="number" id="springDiameter">
+            <label for="wireDiameter">Wire Diameter (d) [mm]:</label>
+            <input type="number" id="wireDiameter">
+            <label for="turns">Number of Turns (n):</label>
+            <input type="number" id="turns">
+            <button type="button" onclick="calculate()">Calculate</button>
+        </form>
+        <div id="results"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

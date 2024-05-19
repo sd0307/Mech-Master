@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MechMaster - Engineering Calculators</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+      <img src="logo (2).png" alt="MechMaster Logo" class="logo">
+        <div class="header-content">
+          <h1>Welcome to MechMaster</h1>
+          <!-- <p>Explore our engineering calculators below:</p> -->
+        </div>
+      </header>
+
+  <main>
+    <div class="calculator">
+      <img src="https://www.structuralbasics.com/wp-content/uploads/2022/06/Moment-of-Inertia-formulas-and-calculation-examples-for-the-most-common-cross-sections-and-profiles.png" alt="Moment of Inertia Analysis">
+      <h2>Moment of Inertia Analysis</h2>
+      <p>Analyze centriod, moment of inertia and bending stress for different shapes.</p>
+      <button onclick="navigateTo('/cross-section/index.html')">Click Here!</button>
+    </div>
+    <div class="calculator">
+      <img src="https://mechanicalc.com/static/img/Main/ContentsCalc/mohrs-circle-01.webp" alt="Mohr Circle Analysis">
+      <h2>Mohr Circle Analysis</h2>
+      <p>Analyze stress transformation using Mohr's circle.</p>
+      <button onclick="navigateTo('/mohr/index.html')">Click Here!</button>
+    </div>
+    <div class="calculator">
+      <img src="https://www.efunda.com/formulae/solid_mechanics/mat_mechanics/images/MaxShearStress.gif" alt="Principal Stress Analysis">
+      <h2>Principal Stress Analysis</h2>
+      <p>Analyze normal stress, resultant stress, major and  minor principal stresses.</p>
+      <button onclick="navigateTo('/principal-stress/index.html')">Click Here!</button>
+    </div>
+    <div class="calculator">
+      <img src="https://engineeringlibrary.org/static/img/References/Air-Force-Stress-Manual/10-shaft-analysis/Original/fig-10-6-drawing-illustrating-a-loaded-shaft.png" alt="Shaft Analysis">
+      <h2>Torsion Analysis</h2>
+      <p>Analyze shafts for torsional and bending stresses.</p>
+      <button onclick="navigateTo('/torque/index.html')">Click Here!</button>
+    </div>
+    <div class="calculator">
+      <img src="https://www.engineersedge.com/graphics/beam-3supports-uniformp.png" alt="Beam Analysis">
+      <h2>Beam Analysis</h2>
+      <p>Analyze beam deflection and stress.</p>
+      <button onclick="navigateTo('/sfd/index.html')">Click Here!</button>
+    </div>
+    <div class="calculator">
+      <img src="https://mechanicalc.com/static/img/Main/ContentsCalc/column-buckling-01.webp" alt="Column & Struts Analysis">
+      <h2>Column & Struts Analysis</h2>
+      <p>Analyze columns and struts for buckling based on different theories.</p>
+      <button onclick="navigateTo('/columns/index.html')">Click Here!</button>
+    </div>
+    <div class="calculator">
+      <img src="https://qph.cf2.quoracdn.net/main-qimg-d46484cfae80640cba6b41bd14200493-pjlq" alt="Combined Bending & Torsion Analysis">
+      <h2>Combined Bending & Torsion Analysis</h2>
+      <p>Analyze combined effects of bending and torsion.</p>
+      <button onclick="navigateTo('/combined/index.html')">Click Here!</button>
+    </div>
+    <div class="calculator">
+      <img src="https://www.researchgate.net/publication/345414158/figure/fig1/AS:955166568243202@1604740864964/Nomenclature-of-coil-spring.png" alt="Spring Analysis">
+      <h2>Spring Analysis</h2>
+      <p>Analyze strain energy, deflection, stiffness and shear stress of open coiled and closed coiled spring of different materials.</p>
+      <button onclick="navigateTo('/spring/index.html')">Click Here!</button>
+    </div>
+    <div class="calculator">
+      <img src="https://gs-post-images.grdp.co/2020/8/3-img1596961880633-74.png-rs-high-webp.png" alt="Thin Cylinder Analysis">
+      <h2>Thin Cylinder Analysis</h2>
+      <p>Analyze hoop stress, longitudnal stress, differents acting on thin cylinder of different materials.</p>
+      <button onclick="navigateTo('/thinCylinder/index.html')">Click Here!</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 MechMaster. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function navigateTo(url) {
+      window.location.href = url;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="Favicon1.png" type="image/x-icon">
+    <title>Cross-Section Analysis with Bending Stress</title>
+</head>
+<body>
+    <h1>Cross-Section Analysis with Bending Stress</h1>
+    
+    <div class="container">
+        <!-- Dropdown to select cross-section -->
+        <label for="cross-section-select">Select a Cross-Section:</label>
+        <select id="cross-section-select">
+            <option value="" disabled selected>Select a Cross-Section</option>
+            <option value="circle">Circle</option>
+            <option value="rectangle">Rectangle</option>
+            <option value="square">Square</option>
+            <option value="triangle">Triangle</option>
+            <option value="i-section">I-Section</option>
+            <option value="t-section">T-Section</option>
+            <option value="l-section">L-Section</option>
+        </select>
+
+        <!-- Display the selected cross-section image -->
+        <img id="cross-section-image" alt="Cross-Section Image">
+
+        <!-- Form for cross-section parameters -->
+        <div id="cross-section-form">
+            <!-- Forms for various cross-sections will be dynamically populated here using JavaScript -->
+        </div>
+
+        <!-- Dropdown to select beam type -->
+        <label for="beam-type">Select Beam Type:</label>
+        <select id="beam-type">
+            <option value="" disabled selected>Select Type of beam</option>
+            <option value="ss-point-load">Simply Supported Beam with Point Load</option>
+            <option value="ss-udl">Simply Supported Beam with UDL</option>
+            <option value="cantilever-point-load">Cantilever Beam with Point Load</option>
+            <option value="cantilever-udl">Cantilever Beam with UDL</option>
+        </select>
+
+        <!-- Input fields for load, length, and distance from neutral axis -->
+        <label for="load">Load Applied:</label>
+        <input type="number" id="load" placeholder="Enter load in (N)" required>
+
+        <label for="length">Length of Beam:</label>
+        <input type="number" id="length" placeholder="Enter length in (mm)" required>
+
+        <label for="distance-neutral-axis">Distance from Neutral Axis (y):</label>
+        <input type="number" id="distance-neutral-axis" placeholder="Enter distance in (mm)" required>
+
+        <!-- Button to calculate results -->
+        <button id="calculate-button">Calculate</button>
+
+        <!-- Result section for centroid and moment of inertia calculations -->
+        <div id="results">
+            <h2>Results</h2>
+            <p>Centroid (x, y): <span id="centroid"></span></p>
+            <p>Moment of Inertia Ixx: <span id="moment-of-inertia-x"></span></p>
+            <p>Moment of Inertia Iyy: <span id="moment-of-inertia-y"></span></p>
+            <p>Moment of Inertia Izz: <span id="moment-of-inertia-z"></span> </p>
+            <h3>Bending Stress (σ)</h3>
+            <p>Bending Stress: <span id="bending-stress"></span> N/mm<sup>2</sup></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
